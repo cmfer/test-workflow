@@ -17,7 +17,7 @@ public class BankAccountTest {
         int balance = account.deposit(10);
 
         assertBankAccount(account).hasFunds();
-        assertThat(balance).isEqualTo(9);
+        assertThat(balance).isEqualTo(10);
         assertThat(account.getMovements())
         .hasSize(1)
         .containsExactly(new BankMovement(BankMovement.MOVEMENT_TYPE.DEPOSIT, 10));
